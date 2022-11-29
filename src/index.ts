@@ -1,11 +1,18 @@
 
 let age= 30_000_000;
 
-//function nums (array: number[]) {loops through the array and logs out each item}
+//turple
 
-function nums (array: number[]) {
-    array.forEach((item) => {
-        console.log(item);
-    });
-}
-nums([1,2,3,4,5,6,7,8,9,10]);
+let person: [string, number] = ['Chris', 22];
+
+//log person
+
+console.log(person);
+
+//enum
+
+const enum Size { Small = 10, Medium, Large}
+
+let selected: Size = Size.Large;
+
+console.log(selected);
