@@ -20,7 +20,7 @@ console.log(selected);
 //object
 
 
-let companys: {id:number,name:string}[] = [];
+let companys: {readonly id:number,name:string}[] = [];
 
 companys.push({id: 3, name: 'Apple'});
 companys.push({id: 4, name: 'Facebook'});
