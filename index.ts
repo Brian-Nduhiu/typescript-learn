@@ -1,17 +1,14 @@
-//require express
-const express = require('express');
-
-//create a new express application instance
-const app= express();
-
-//define a route handler for the default home page
-app.get('/', (req: any, res: { send: (arg0: string) => void; }) => {
-    res.send('Hello world!');
-});
-
-//start the Express server
-app.listen(3000, () => {
-    console.log('Server started on port 3000');
-});
-
+//require http module
+var http = require("http");
+//create server
+http.createServer(function (request: any, response: { writeHead: (arg0: number, arg1: { 'Content-Type': string; }) => void; end: (arg0: string) => void; }) {
+    //send the HTTP header
+    //HTTP Status: 200 : OK
+    //Content Type: text/plain
+    response.writeHead(200, {'Content-Type': 'text/plain'});
+    //send the response body as "Hello World"
+    response.end('Hello Jamal'); //end the response  
+}).listen(3000); //the server object listens on port 3000
+//print to console
+console.log('Server running at http://  :3000/');
 
